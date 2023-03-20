@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router()
-
 const TaskModel = require('../models/tasks')
 
 // Get all Tasks List Api with Get Method
@@ -30,8 +29,8 @@ router.post('/post', async (req, res) => {
     }
 })
 
-// Update Task with Patch Method
-router.patch('/update/:id', async (req, res) => {
+// Update Task with Put Method
+router.put('/update/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const updatedData = req.body;
